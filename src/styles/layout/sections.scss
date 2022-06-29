@@ -1,0 +1,60 @@
+.page-section, .page-section .container {
+  display: flex;
+}
+
+.page-section {
+  &.alternative-background {
+    background-color: $section-bg;
+  }
+}
+
+[class*=section-item] {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.section-item {
+  &-40 {
+    width: 40%;
+  }
+
+  &-60 {
+    width: 60%;
+  }
+
+  &-with-background {
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+.section-overlap-to-right {
+  justify-content: flex-end;
+
+  > * {
+    transform: translateX(50px);
+  }
+}
+
+.section-overlap-to-top {
+  align-items: flex-start;
+
+  @media screen and (min-width: 499px) {
+    > * {
+      margin-top: -50px;
+    }
+  }
+}
+
+.section-mobile {
+  @media screen and (max-width: 500px) {
+    &-100 {
+      width: 100%;
+    }
+
+    &-hide {
+      display: none;
+    }
+  }
+}

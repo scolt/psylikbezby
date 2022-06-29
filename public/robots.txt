@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/
+
+Host: psylikbez.by
+Sitemap: https://psylikbez.by/sitemap.xml

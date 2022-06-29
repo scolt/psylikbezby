@@ -1,0 +1,161 @@
+.timeline {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+    &:nth-child(2n + 1) .achievement {
+      padding-left: 0;
+      padding-right: 90px;
+      text-align: right;
+
+      @media screen and (max-width: 768px) {
+        padding-right: 30px;
+      }
+
+      i {
+        left: auto;
+        right: 30px;
+
+        @media screen and (max-width: 768px) {
+            right: -30px;
+        }
+      }
+    }
+  }
+
+  .delimiter {
+    height: 100%;
+    min-height: 6rem;
+    max-width: 4%;
+    width: 0.75rem;
+    position: relative;
+    padding: 0;
+    border-bottom: 3px solid $section-bg;
+
+    &:after, &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background: #ccc;
+      top: 50%;
+      left: -25px;
+    }
+
+    &:after {
+      left: auto;
+      right: -25px;
+    }
+  }
+
+  span {
+    width: 48%;
+    padding: 0 30px;
+    text-align: left;
+  }
+
+  .year {
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: 300;
+  }
+
+  > div {
+    &:nth-child(2n + 1) .year {
+      text-align: left;
+    }
+
+    &:nth-child(1) {
+      .delimiter, .achievement i {
+        background-color: #cc9521;
+      }
+    }
+
+    &:nth-child(2) {
+      .delimiter, .achievement i {
+        background-color: #ae3e07;
+      }
+    }
+
+    &:nth-child(3) {
+      .delimiter, .achievement i {
+        background-color: #833d68;
+      }
+    }
+
+    &:nth-child(4) {
+      .delimiter, .achievement i {
+        background-color: #141811;
+      }
+    }
+
+    &:nth-child(5) {
+      .delimiter, .achievement i {
+        background-color: #ae3e07;
+      }
+    }
+
+    &:nth-child(6) {
+      .delimiter, .achievement i {
+        background-color: #f87004;
+      }
+    }
+
+    &:nth-child(7) {
+      .delimiter, .achievement i {
+        background-color: #540405;
+      }
+    }
+
+    &:nth-child(8) {
+      .delimiter, .achievement i {
+        background-color: #2e5b63;
+      }
+    }
+  }
+
+  .achievement {
+    position: relative;
+    padding-right: 0;
+    padding-left: 90px;
+    text-align: left;
+    font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    i {
+      z-index: 5;
+      display: flex;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      color: $section-bg;
+      border-radius: 50%;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 768px) {
+        left: -30px;
+      }
+    }
+  }
+}

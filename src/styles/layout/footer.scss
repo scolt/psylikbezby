@@ -1,0 +1,18 @@
+footer {
+  background: $accent-bg-footer;
+  padding: 16px 0 0;
+
+  img {
+    max-width: 100%;
+    width: 700px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .copyright {
+    padding: 16px;
+    background: $item-background-color;
+    text-align: center;
+    color: #fff;
+  }
+}

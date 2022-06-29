@@ -1,0 +1,56 @@
+#about {
+  background-color: $accent-bg;
+  color: $opposite-text-color;
+  min-height: 500px;
+  position: relative;
+
+  @media screen and (max-width: 500px) {
+    min-height: 0;
+  }
+
+  .section-item-with-background {
+    @media screen and (max-width: 500px) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .me {
+    @media screen and (max-width: 500px) {
+      font-size: 25px;
+    }
+  }
+
+  .section-overlap-to-right {
+    @media screen and (max-width: 500px) {
+      position: relative;
+      width: 100%;
+      z-index: 10;
+    }
+
+    > * {
+      @media screen and (max-width: 500px) {
+        transform: none;
+      }
+    }
+  }
+
+}
+
+.about-description {
+  padding: 32px 0;
+
+  .me {
+    text-align: right;
+  }
+
+  .promo {
+    font-weight: 100;
+    text-align: right;
+  }
+
+  span {
+    display: block;
+  }
+}

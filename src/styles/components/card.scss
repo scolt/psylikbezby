@@ -1,0 +1,27 @@
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -16px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.cards-item {
+  padding: 16px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  h3 {
+    @media screen and (max-width: 768px) {
+      min-height: 0;
+      margin-bottom: 0;
+    }
+  }
+}
